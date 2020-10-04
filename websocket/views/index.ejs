@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>http服务基础上创建websocket</title>
+</head>
+<body>
+ejs template
+<script>
+  const ws = new WebSocket('ws:///localhost:8000');
+  ws.onmessage = event => {
+    console.log(`index.ejs receive message from 8000 port, `, event.data);
+  };
+</script>
+<script>
+  var xhr = new XMLHttpRequest(),
+    method = "GET",
+    url = "http://localhost:8080/web";
+
+  // 从`8080/web`请求到数据新
+  xhr.open(method, url, true);
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      console.log(xhr.responseText);
+    }
+  };
+  xhr.send();
+</script>
+</body>
+</html>
