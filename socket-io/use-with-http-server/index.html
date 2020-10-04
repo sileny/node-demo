@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>socket io</title>
+</head>
+<body>
+<!-- 不需要socket.io.js文件，服务器启动后node.js自动生成 -->
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    // 1、客户端请求连接
+    var socket = io('http://localhost');
+    // 4、客户端监听服务端的数据
+    socket.on('news', function (data) {
+        console.log(data);
+        // 5、客户端向服务端发送另外一条数据
+        socket.emit('my other event', {my: 'data'});
+    });
+</script>
+</body>
+</html>
