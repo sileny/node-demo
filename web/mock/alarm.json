@@ -1,0 +1,78 @@
+{
+  "iTotalRecords": 6,
+  "iTotalDisplayRecords": 6,
+  "aaData": [
+    {
+      "currentLevel": 319.0,
+      "createTime": 1544312422000,
+      "latitude": 30.312414,
+      "alias": "兴源井盖01",
+      "company": "bf09ca06b6384480a1a491821d7292eb",
+      "deviceId": "1d521a92-ba0e-4639-a2c7-7802f8961546",
+      "nodeId": "863703034676184",
+      "longitude": 120.1503,
+      "status": 1,
+      "voltage": 3518.0
+    },
+    {
+      "currentLevel": 225.0,
+      "createTime": 1544277021000,
+      "latitude": 1.0,
+      "alias": "王店5",
+      "company": "TYZZ",
+      "deviceId": "82929b77-3e83-4dcf-bf2d-a5382c3c376c",
+      "nodeId": "863703035646541",
+      "longitude": 1.0,
+      "status": 1,
+      "voltage": 3273.0
+    },
+    {
+      "currentLevel": 47.0,
+      "createTime": 1544333405000,
+      "latitude": 29.953315,
+      "alias": "nb043",
+      "company": "0f259db8e78841718367f07eb242782c",
+      "deviceId": "edc10014-4053-46f1-a4a0-5a1cb4106110",
+      "nodeId": "863703035690887",
+      "longitude": 121.480898,
+      "status": 1,
+      "voltage": 3529.0
+    },
+    {
+      "currentLevel": 107.0,
+      "createTime": 1544331677000,
+      "latitude": 29.952378,
+      "alias": "nb100",
+      "company": "0f259db8e78841718367f07eb242782c",
+      "deviceId": "1b5e086e-711c-43b4-8237-72783ffb0ccd",
+      "nodeId": "863703035735799",
+      "longitude": 121.471923,
+      "status": 1,
+      "voltage": 3391.0
+    },
+    {
+      "currentLevel": 52.0,
+      "createTime": 1544342964000,
+      "latitude": 29.952417,
+      "alias": "nb115",
+      "company": "0f259db8e78841718367f07eb242782c",
+      "deviceId": "791f8fa6-a788-4a2b-ad13-cf6693b63dd8",
+      "nodeId": "863703035736763",
+      "longitude": 121.471387,
+      "status": 1,
+      "voltage": 3538.0
+    },
+    {
+      "currentLevel": 249.0,
+      "createTime": 1544352123000,
+      "latitude": 30.297117,
+      "alias": "mxxz002",
+      "company": "859fabe393da4ada82455dc4fcc9aefd",
+      "deviceId": "31325149",
+      "nodeId": "865820031030757",
+      "longitude": 120.009152,
+      "status": 1,
+      "voltage": 3382.0
+    }
+  ]
+}

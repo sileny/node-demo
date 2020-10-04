@@ -1,0 +1,719 @@
+{
+  "iTotalRecords": 40,
+  "iTotalDisplayRecords": 40,
+  "aaData": [
+    {
+      "orgName": "山东井盖",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [],
+      "orgId": "f75cf1b3895f485190ccf52cde5a2ce2",
+      "parentId": ""
+    },
+    {
+      "orgName": "济南设备",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [],
+      "orgId": "81bf2da41e044601bc4ece90b832af58",
+      "parentId": ""
+    },
+    {
+      "orgName": "山东烟感",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [],
+      "orgId": "8e2a8f9eeec849babbc3b4d2c5199443",
+      "parentId": ""
+    },
+    {
+      "orgName": "新会区路灯管理所",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [],
+      "orgId": "00c6cf83586d4ec0a4b17a32436f1ff3",
+      "parentId": ""
+    },
+    {
+      "orgName": "路灯开放实验室",
+      "auth": true,
+      "childOrgs": [
+        {
+          "orgName": "下沙片区",
+          "auth": true,
+          "childOrgs": [],
+          "nbGroups": [
+            {
+              "insertTime": 1533006173000,
+              "groupName": "cc_Test",
+              "groupId": "cd1caed397dd4f71b6aa7bb39540645a",
+              "type": 0,
+              "orgId": "8d851e122a004646aaaddf89af7f34b1"
+            },
+            {
+              "insertTime": 1528435899000,
+              "groupName": "演示操作02",
+              "groupId": "4a75945ddb7b4ab5b3fbde8c6777113b",
+              "type": 0,
+              "orgId": "8d851e122a004646aaaddf89af7f34b1"
+            },
+            {
+              "insertTime": 1523867288000,
+              "groupName": "单灯-开关及调光操作",
+              "groupId": "e5b216a5da304916be598ee0e5de3286",
+              "type": 0,
+              "orgId": "8d851e122a004646aaaddf89af7f34b1"
+            },
+            {
+              "insertTime": 1528435913000,
+              "groupName": "演示操作04",
+              "groupId": "c055add7b3154030a0f52f0fbd4a7281",
+              "type": 0,
+              "orgId": "8d851e122a004646aaaddf89af7f34b1"
+            },
+            {
+              "insertTime": 1528082056000,
+              "groupName": "演示操作",
+              "groupId": "ad6882be46904d719835a305aa655d5e",
+              "type": 0,
+              "orgId": "8d851e122a004646aaaddf89af7f34b1"
+            },
+            {
+              "insertTime": 1528435906000,
+              "groupName": "演示操作03",
+              "groupId": "592b970c33cd41af86c75f4c933c5407",
+              "type": 0,
+              "orgId": "8d851e122a004646aaaddf89af7f34b1"
+            },
+            {
+              "insertTime": 1528435919000,
+              "groupName": "演示操作06",
+              "groupId": "3780066f5e03417c8d8a7c27c4f4d078",
+              "type": 0,
+              "orgId": "8d851e122a004646aaaddf89af7f34b1"
+            },
+            {
+              "insertTime": 1528435932000,
+              "groupName": "演示操作01",
+              "groupId": "fa2a8e074e6f47be8d807c9578a9a278",
+              "type": 0,
+              "orgId": "8d851e122a004646aaaddf89af7f34b1"
+            }
+          ],
+          "orgId": "8d851e122a004646aaaddf89af7f34b1",
+          "parentId": "4ca3ae7721344845afc49dc15dcf86dc"
+        }
+      ],
+      "nbGroups": [],
+      "orgId": "4ca3ae7721344845afc49dc15dcf86dc",
+      "parentId": ""
+    },
+    {
+      "orgName": "海南联通",
+      "auth": true,
+      "childOrgs": [
+        {
+          "orgName": "灯控制",
+          "auth": true,
+          "childOrgs": [],
+          "nbGroups": [
+            {
+              "insertTime": 1523260228000,
+              "groupName": "单灯控制",
+              "groupId": "2e09b6c336b84b1c93bfcf15d6dbeea0",
+              "type": 0,
+              "orgId": "fefd981c9cee43debad089afe62fa36c"
+            }
+          ],
+          "orgId": "fefd981c9cee43debad089afe62fa36c",
+          "parentId": "67ca1a8997af495cbe7e92cd08f74a4c"
+        }
+      ],
+      "nbGroups": [
+        {
+          "insertTime": 1522654220000,
+          "groupName": "实验局",
+          "groupId": "2eac722b63584415be4064361b300a62",
+          "type": 0,
+          "orgId": "67ca1a8997af495cbe7e92cd08f74a4c"
+        }
+      ],
+      "orgId": "67ca1a8997af495cbe7e92cd08f74a4c",
+      "parentId": ""
+    },
+    {
+      "orgName": "滨江士兰微",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [],
+      "orgId": "df4d8ec5f2144cc6ae952a678ea1cc3f",
+      "parentId": ""
+    },
+    {
+      "orgName": "比弦展厅",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [
+        {
+          "insertTime": 1541494443000,
+          "groupName": "测试",
+          "groupId": "a0d7dbbf1027416b94c5c55feacdadca",
+          "type": 0,
+          "orgId": "f68c0d299cc9405dadaaddd1c0ae33a3"
+        },
+        {
+          "insertTime": 1541494497000,
+          "groupName": "比弦展厅定时测试",
+          "groupId": "13307141ad4542298d6329e956912544",
+          "type": 0,
+          "orgId": "f68c0d299cc9405dadaaddd1c0ae33a3"
+        }
+      ],
+      "orgId": "f68c0d299cc9405dadaaddd1c0ae33a3",
+      "parentId": ""
+    },
+    {
+      "orgName": "山东测试",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [],
+      "orgId": "f9c3954f073a4315bfd3b5986af3c8c7",
+      "parentId": ""
+    },
+    {
+      "orgName": "金华移动",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [
+        {
+          "insertTime": 1524881791000,
+          "groupName": "义乌路灯",
+          "groupId": "f10cb395cd45432a955bbd788576e06b",
+          "type": 0,
+          "orgId": "d1a9b151043f4f9b8b250ff771e8419c"
+        }
+      ],
+      "orgId": "d1a9b151043f4f9b8b250ff771e8419c",
+      "parentId": ""
+    },
+    {
+      "orgName": "王店用户体验中心",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [],
+      "orgId": "cd02c9fc13d54544a3f2ec6f4131e6b7",
+      "parentId": ""
+    },
+    {
+      "orgName": "应急中心",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [],
+      "orgId": "93cd4c30511d48b6bad16c46321cdbe0",
+      "parentId": ""
+    },
+    {
+      "orgName": "深圳路灯",
+      "auth": true,
+      "childOrgs": [
+        {
+          "orgName": "区域",
+          "auth": true,
+          "childOrgs": [],
+          "nbGroups": [
+            {
+              "insertTime": 1525345180000,
+              "groupName": "A",
+              "groupId": "7e014c6cf6134629838865431e30d04e",
+              "type": 0,
+              "orgId": "f58e7c40a2624143a5ba3e55ded284d1"
+            }
+          ],
+          "orgId": "f58e7c40a2624143a5ba3e55ded284d1",
+          "parentId": "07a4ab2d840c4cea82676a67ba5aac44"
+        }
+      ],
+      "nbGroups": [],
+      "orgId": "07a4ab2d840c4cea82676a67ba5aac44",
+      "parentId": ""
+    },
+    {
+      "orgName": "兴源井盖",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [],
+      "orgId": "bf09ca06b6384480a1a491821d7292eb",
+      "parentId": ""
+    },
+    {
+      "orgName": "演示",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [],
+      "orgId": "6b96e6c077c5478090f66de5f668581e",
+      "parentId": ""
+    },
+    {
+      "orgName": "转塘智能设备",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [],
+      "orgId": "6f5e3de8c2904961b98ceaee37250228",
+      "parentId": ""
+    },
+    {
+      "orgName": "烟感演示",
+      "auth": true,
+      "childOrgs": [
+        {
+          "orgName": "烟感",
+          "auth": true,
+          "childOrgs": [],
+          "nbGroups": [
+            {
+              "insertTime": 1535366625000,
+              "groupName": "港航大厦",
+              "groupId": "620d6dd8b3f642ee82b075f4d664e895",
+              "remark": "测试1#",
+              "type": 4,
+              "orgId": "f0f0337f4ded4e6a8022d932f7014696"
+            }
+          ],
+          "orgId": "f0f0337f4ded4e6a8022d932f7014696",
+          "parentId": "f4c6b8a6777548fdba7e2f7da08aa803"
+        }
+      ],
+      "nbGroups": [],
+      "orgId": "f4c6b8a6777548fdba7e2f7da08aa803",
+      "parentId": ""
+    },
+    {
+      "orgName": "OneNet井盖",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [],
+      "orgId": "ec724754e64b453994d39534aca3b124",
+      "parentId": ""
+    },
+    {
+      "orgName": "北京路灯",
+      "auth": true,
+      "childOrgs": [
+        {
+          "orgName": "区域1",
+          "auth": true,
+          "childOrgs": [],
+          "nbGroups": [],
+          "orgId": "90941ed135274777b259b3d824c9847e",
+          "parentId": "cca18be4b65046d8af68f7cc54dda548"
+        }
+      ],
+      "nbGroups": [
+        {
+          "insertTime": 1535021980000,
+          "groupName": "清华30号楼卫生间灯",
+          "groupId": "f0db3c3d6c7e4d46a1a0fa6287233c44",
+          "type": 0,
+          "orgId": "cca18be4b65046d8af68f7cc54dda548"
+        },
+        {
+          "insertTime": 1542626626000,
+          "groupName": "清华30号学生宿舍一层",
+          "groupId": "c6ab46b54baf4727a69c535de7dfc73b",
+          "type": 0,
+          "orgId": "cca18be4b65046d8af68f7cc54dda548"
+        },
+        {
+          "insertTime": 1542626665000,
+          "groupName": "清华30号学生宿舍三层",
+          "groupId": "1170fd393e844259afb74f5404d7f29b",
+          "type": 0,
+          "orgId": "cca18be4b65046d8af68f7cc54dda548"
+        },
+        {
+          "insertTime": 1542626676000,
+          "groupName": "清华30号学生宿舍四层",
+          "groupId": "d559a5e444164c5dae88e9ff5ffd4f90",
+          "type": 0,
+          "orgId": "cca18be4b65046d8af68f7cc54dda548"
+        },
+        {
+          "insertTime": 1542626704000,
+          "groupName": "清华30号学生宿舍六层",
+          "groupId": "415fc08d0dd4495b99a27593f321f85c",
+          "type": 0,
+          "orgId": "cca18be4b65046d8af68f7cc54dda548"
+        },
+        {
+          "insertTime": 1542626655000,
+          "groupName": "清华30号学生宿舍二层",
+          "groupId": "64700bfd07c24e409feb181c2a31b48f",
+          "type": 0,
+          "orgId": "cca18be4b65046d8af68f7cc54dda548"
+        },
+        {
+          "insertTime": 1542626691000,
+          "groupName": "清华30号学生宿舍五层",
+          "groupId": "e2f8602bf37847f9b4b612e203d33c42",
+          "type": 0,
+          "orgId": "cca18be4b65046d8af68f7cc54dda548"
+        },
+        {
+          "insertTime": 1537852609000,
+          "groupName": "二楼南侧卫生间",
+          "groupId": "956b6566be4e4b87b67d69e6320d22fb",
+          "type": 0,
+          "orgId": "cca18be4b65046d8af68f7cc54dda548"
+        },
+        {
+          "insertTime": 1535021884000,
+          "groupName": "清华30号楼过道灯",
+          "groupId": "397785ee09324ac18419f71e3eef1e0f",
+          "type": 0,
+          "orgId": "cca18be4b65046d8af68f7cc54dda548"
+        },
+        {
+          "insertTime": 1538037967000,
+          "groupName": "一楼北侧洗手间",
+          "groupId": "1bccc617963d4ab3aefc567133ded047",
+          "type": 0,
+          "orgId": "cca18be4b65046d8af68f7cc54dda548"
+        }
+      ],
+      "orgId": "cca18be4b65046d8af68f7cc54dda548",
+      "parentId": ""
+    },
+    {
+      "orgName": "18143448218",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [
+        {
+          "insertTime": 1521619344000,
+          "groupName": "test",
+          "groupId": "d022bc84768d4be2a511b77112143a46",
+          "type": 4,
+          "orgId": "6e6d8eb7525145748a412140fd31359a"
+        }
+      ],
+      "orgId": "6e6d8eb7525145748a412140fd31359a",
+      "parentId": ""
+    },
+    {
+      "orgName": "体验用户组织",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [
+        {
+          "insertTime": 1521612780000,
+          "groupName": "B组",
+          "groupId": "b323e152c12645a2a1e1b551130c5919",
+          "type": 1,
+          "orgId": "TYZZ"
+        },
+        {
+          "insertTime": 1521612872000,
+          "groupName": "C组",
+          "groupId": "9984ae77b42041e38960668ccebffdd4",
+          "type": 0,
+          "orgId": "TYZZ"
+        },
+        {
+          "insertTime": 1542336418000,
+          "groupName": "d",
+          "groupId": "2b9fcea686e847deaf322d18c7b0a910",
+          "type": 1,
+          "orgId": "TYZZ"
+        },
+        {
+          "insertTime": 1528684381000,
+          "groupName": "井盖",
+          "groupId": "6ce9275ff3034ffd9d55743c0cb5bb52",
+          "type": 3,
+          "orgId": "TYZZ"
+        }
+      ],
+      "orgId": "TYZZ",
+      "parentId": ""
+    },
+    {
+      "orgName": "衢州水质",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [],
+      "orgId": "3241549b125144a9ac975190ce168818",
+      "parentId": ""
+    },
+    {
+      "orgName": "睿声烟感演示",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [],
+      "orgId": "c2d4ac8034974029851e4a21a49a5a15",
+      "parentId": ""
+    },
+    {
+      "orgName": "深圳四色灯",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [],
+      "orgId": "four_sz",
+      "parentId": ""
+    },
+    {
+      "orgName": "csa",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [
+        {
+          "insertTime": 1534818031000,
+          "groupName": "杭州测试",
+          "groupId": "0093b3e8d7fc4af6974a4bc84747c8d3",
+          "type": 0,
+          "orgId": "fa816f4630244ff8a8a95e42a0fdf0eb"
+        },
+        {
+          "insertTime": 1531881884000,
+          "groupName": "厦门验收",
+          "groupId": "5a508c06a33e437292157dc59eb9c1ff",
+          "type": 0,
+          "orgId": "fa816f4630244ff8a8a95e42a0fdf0eb"
+        },
+        {
+          "insertTime": 1531908187000,
+          "groupName": "测试",
+          "groupId": "c621c62effcc4c6fa7f2365402433769",
+          "type": 0,
+          "orgId": "fa816f4630244ff8a8a95e42a0fdf0eb"
+        },
+        {
+          "insertTime": 1531898381000,
+          "groupName": "修改上报周期_CSA",
+          "groupId": "e2388798eac24304aa964a6ae3a13690",
+          "type": 0,
+          "orgId": "fa816f4630244ff8a8a95e42a0fdf0eb"
+        }
+      ],
+      "orgId": "fa816f4630244ff8a8a95e42a0fdf0eb",
+      "parentId": ""
+    },
+    {
+      "orgName": "上海onenet",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [
+        {
+          "insertTime": 1528264725000,
+          "groupName": "上海onenet水箱",
+          "groupId": "05caafa4fd594b28a9ad72f0f934b3b8",
+          "type": 7,
+          "orgId": "86b1e50df6824f299d5e08ee0a28d34f"
+        },
+        {
+          "insertTime": 1528264715000,
+          "groupName": "上海onenet井盖",
+          "groupId": "bf362e69286d43a7b0aed382b73283de",
+          "type": 3,
+          "orgId": "86b1e50df6824f299d5e08ee0a28d34f"
+        }
+      ],
+      "orgId": "86b1e50df6824f299d5e08ee0a28d34f",
+      "parentId": ""
+    },
+    {
+      "orgName": "吉林井盖",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [],
+      "orgId": "8ab5054d2d544d8f8271d1a9824bcf90",
+      "parentId": ""
+    },
+    {
+      "orgName": "浙江省移动",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [],
+      "orgId": "374430d3a770459ebb72a207c5198777",
+      "parentId": ""
+    },
+    {
+      "orgName": "light_test_lz",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [
+        {
+          "insertTime": 1533179271000,
+          "groupName": "LampTest",
+          "groupId": "d6deac2d71214020a7dc8fc9ac8fb58f",
+          "type": 0,
+          "orgId": "84073e0d58294b9b99bd941c5b4d62cb"
+        },
+        {
+          "insertTime": 1535336768000,
+          "groupName": "0827定时测试",
+          "groupId": "b422a0a0ed724423aca117917f380da6",
+          "type": 0,
+          "orgId": "84073e0d58294b9b99bd941c5b4d62cb"
+        }
+      ],
+      "orgId": "84073e0d58294b9b99bd941c5b4d62cb",
+      "parentId": ""
+    },
+    {
+      "orgName": "厦门路灯",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [],
+      "orgId": "53f94cc6ca4646608b878c5f363e5197",
+      "parentId": ""
+    },
+    {
+      "orgName": "深圳井盖",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [],
+      "orgId": "f9e7a71a2ea94f4496a5b87438c33aff",
+      "parentId": ""
+    },
+    {
+      "orgName": "深圳烟感",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [],
+      "orgId": "1a565c748c6f4a8388196eb4b78754a0",
+      "parentId": ""
+    },
+    {
+      "orgName": "宁波井盖",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [
+        {
+          "insertTime": 1537865842000,
+          "groupName": "防水测试",
+          "groupId": "47be9868b7bc4f04abae0ef2dca83f5a",
+          "type": 3,
+          "orgId": "0f259db8e78841718367f07eb242782c"
+        }
+      ],
+      "orgId": "0f259db8e78841718367f07eb242782c",
+      "parentId": ""
+    },
+    {
+      "orgName": "15850574692",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [],
+      "orgId": "c2951d10d9824e919e964d60bacb676f",
+      "parentId": ""
+    },
+    {
+      "orgName": "梦想小镇",
+      "auth": true,
+      "childOrgs": [
+        {
+          "orgName": "演示区域",
+          "auth": true,
+          "childOrgs": [],
+          "nbGroups": [
+            {
+              "insertTime": 1522030132000,
+              "groupName": "路灯管理组",
+              "groupId": "8ec7994b275244ea803e7c0d8ef5af0f",
+              "type": 1,
+              "orgId": "ad848447319441deab0fe64faa074c23"
+            }
+          ],
+          "orgId": "ad848447319441deab0fe64faa074c23",
+          "parentId": "859fabe393da4ada82455dc4fcc9aefd"
+        }
+      ],
+      "nbGroups": [],
+      "orgId": "859fabe393da4ada82455dc4fcc9aefd",
+      "parentId": ""
+    },
+    {
+      "orgName": "山西移动",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [],
+      "orgId": "3b6820e07f984530887f1db36c8b381a",
+      "parentId": ""
+    },
+    {
+      "orgName": "山东济南",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [],
+      "orgId": "2f52c8a99adc4273a0189edf63172bb6",
+      "parentId": ""
+    },
+    {
+      "orgName": "睿声烟感",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [],
+      "orgId": "ruisheng_smoke",
+      "parentId": ""
+    },
+    {
+      "orgName": "测试",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [
+        {
+          "insertTime": 1531992673000,
+          "groupName": "比弦测试",
+          "groupId": "75a2eb7b710c47e29c2b8cc6aa7fdcfd",
+          "type": 0,
+          "orgId": "b5d38ed527de4457a2d263cfad0264a1"
+        },
+        {
+          "insertTime": 1532930807000,
+          "groupName": "比弦测试2",
+          "groupId": "bfd46ce0368748fc85e7a931ebc5f4b5",
+          "type": 0,
+          "orgId": "b5d38ed527de4457a2d263cfad0264a1"
+        },
+        {
+          "insertTime": 1532930816000,
+          "groupName": "比弦测试3",
+          "groupId": "54ecb39c6fe249a8ae878b93631b6e17",
+          "type": 0,
+          "orgId": "b5d38ed527de4457a2d263cfad0264a1"
+        },
+        {
+          "insertTime": 1532930824000,
+          "groupName": "比弦测试4",
+          "groupId": "7b9dc90c81e04e56ba11c5e6927273ef",
+          "type": 0,
+          "orgId": "b5d38ed527de4457a2d263cfad0264a1"
+        },
+        {
+          "insertTime": 1532049260000,
+          "groupName": "比弦2",
+          "groupId": "f8efe06b9a0442a795e5e22834a08893",
+          "type": 0,
+          "orgId": "b5d38ed527de4457a2d263cfad0264a1"
+        },
+        {
+          "insertTime": 1532930829000,
+          "groupName": "比弦测试5",
+          "groupId": "0faf4bc8992e47dabcb3c1f01f34435d",
+          "type": 0,
+          "orgId": "b5d38ed527de4457a2d263cfad0264a1"
+        }
+      ],
+      "orgId": "b5d38ed527de4457a2d263cfad0264a1",
+      "parentId": ""
+    },
+    {
+      "orgName": "鸿雁",
+      "auth": true,
+      "childOrgs": [],
+      "nbGroups": [],
+      "orgId": "45da817177604ae599c0a31c25a6b7b6",
+      "parentId": ""
+    }
+  ]
+}
