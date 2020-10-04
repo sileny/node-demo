@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>custom multi</title>
+</head>
+<body>
+<h2>左边一个表单可以上传2个文件</h2>
+<h2>右边一个表单可以上传3个文件</h2>
+<form action="/multi-fields" method="post" enctype="multipart/form-data">
+    <input type="file" name="field1" multiple>
+    <input type="file" name="field2" multiple>
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>
