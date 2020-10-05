@@ -106,4 +106,49 @@ server.listen(8888);
 
 ### pub-sub-02
 
+在 `pub-sub-01` 的基础上添加对 `close` 和 `shutdown` 事件的监听
 
+```js
+const events = require('events');
+const net = require('net');
+
+const channel = new events.EventEmitter();
+channel.clients = {};
+channel.subscriptions = {};
+channel.on('join', function(id, client) {
+  this.clients[id] = client;
+  this.subscriptions[id] = (senderId, message) => {
+    if (id !== senderId) { // 不将telnet发送方出去的数据回传到自己的telnet
+      this.clients[id].write(message);
+    }
+  };
+  this.on('broadcast', this.subscriptions[id]);
+});
+channel.on('leave', function(id) {
+  channel.removeListener('broadcast', this.subscriptions[id]);
+  channel.emit('boradcast', id, `${id} has left.`
+});
+channel.on('shutdown', function() {
+  channel.emit('broadcast', '', 'The server has shutdown');
+  channel.removeAllListeners('broadcast');
+});
+
+const server = net.createServer(cilent => {
+  const id = `${client.remoteAddress}:${client.remotePort}`;
+  channel.emit('join', id, client);
+
+  cilent.on('data', data => {
+    data = data.toString();
+    if (data === 'shutdown\r\n') { // 输入的shutdown
+      channel.emit('shutdown');    // 发射shutdown命令
+    }
+    channel.emit('broadcast', id, data);
+  });
+  client.on('close', () => {
+    channel.emit('leave', id);
+  });
+});
+server.listen(8888);
+```
+
+此时，在 `telnet` 客户端输入 `shutdown` 后回车，参与的所有聊天的人将会被踢出去
