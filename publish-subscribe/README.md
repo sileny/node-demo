@@ -7,6 +7,7 @@
 - [emit](#emit)
 - [pub-sub-01](#pub-sub-01)
 - [pub-sub-02](#pub-sub-02)
+- [error](#error)
 
 ### on
 
@@ -152,3 +153,23 @@ server.listen(8888);
 ```
 
 此时，在 `telnet` 客户端输入 `shutdown` 后回车，参与的所有聊天的人将会被踢出去
+
+### error
+
+监听错误
+```js
+const events = require('events');
+
+const emitter = new events.EventEmitter();
+emitter.emit('error', new Error('Something is wrong'));
+emitter.on('error', error => console.log(`Error message: ${error.message}`));
+```
+
+如果发射出去的事件没有第二参数的 `error` 对象，栈跟踪会抛出一个 `uncaughtException` 的错误，而且会立即停止程序，该错误会用一个被废弃掉的方法来处理
+
+```js
+process.on('uncaughtException', err => {
+  console.log(err);
+  process.exit(1);
+});
+```
