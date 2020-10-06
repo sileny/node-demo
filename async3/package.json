@@ -10,6 +10,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "async": "^3.2.0"
+    "async": "^3.2.0",
+    "axios": "^0.20.0",
+    "htmlparser": "^1.7.7"
   }
 }
