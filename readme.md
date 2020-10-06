@@ -1,6 +1,6 @@
 # content
 
-- [async串行任务](#async)
+- [async串行任务](./async)
 - [async-io异步](./async-io)
 - [自动化](./automatic)
 - [Node自带的Buffer](./Buffer)
