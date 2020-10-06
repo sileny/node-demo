@@ -1,5 +1,9 @@
 # async
 
+### why-how
+
+为什么要使用串行流程控制业务
+
 可能会遇到类似的业务实现
 
 ```js
@@ -14,7 +18,11 @@ setTimeout(() => {
 }, 100);
 ```
 
-串行代码，可以通过 `async` 第三方库进行改造
+存在的问题，代码会嵌套的很深，缺少组织性
+
+### 如何优雅地使用串行控制流程
+
+串行代码，可以通过 `async` 第三方库进行改造，该包在内部做了很多兼容性处理
 
 `npm install async`
 
@@ -205,8 +213,8 @@ var eachOfLimit = (limit) => {
       if (canceled) return
       running -= 1;
       if (err) {
-        done = true;
-        callback(err);
+        done = true; // 标记执行完成
+        callback(err); // 执行回调
       }
       else if (err === false) {
         done = true;
@@ -223,7 +231,7 @@ var eachOfLimit = (limit) => {
 
     function replenish () {
       looping = true;
-      while (running < limit && !done) {
+      while (running < limit && !done) { // 并行迭代任务
         var elem = nextElem();
         if (elem === null) {
           done = true;
