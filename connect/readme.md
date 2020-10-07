@@ -1,0 +1,71 @@
+# connect
+
+`connect` 以前是 `express` 的基础。只用 `connect` 也是可以的做出完整的web程序。
+
+- [基本demo](#basic-demo)
+- [运行机制](#principle)
+
+### basic-demo
+安装依赖
+```
+npm i connect
+```
+
+下面是一个 `connect` 的简单案例
+
+```js
+const app = require('connect')();
+app.use((req, res, next) => {
+  res.end('hello');
+});
+app.listen(3000);
+```
+
+传入 `app.use` 的是一个中间件，中间件是 `connect` 和 `express` 的基础。下面来介绍其中的原理(principle)。
+
+### principle
+
+connect 中间件就是一个 javascript 函数，这个函数一般会有三个参数：请求对象、响应对象，以及一个名称为 `next` 的回调。当需要执行后续的中间件的时候，需要调用这个 `next` 回调，将控制权交还给分派器。
+
+在中间件运行之前，`connect` 会用分派器接管请求对象，然后，交给第一个中间件处理。然后，根据需要，执行 `next` 回调。不执行 `next` 回调，能停止中间件的后续执行，可以利用该特征实现权限的校验。
+
+下面定义了俩中间件，第一个有执行 `next` 回调，第二个没有，因为，此时后续没有对应的中间件业务需要处理，所以，不需要将控制权交还给分派器。
+```js
+const connect = require('connect');
+function logger(req, res, next) {
+  console.log('s% s%', req.method, req.url);
+  next();
+}
+function hello(req, res) {
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('hello middleware');
+}
+connect()
+  .use(logger)
+  .use(hello)
+  .listen(3000);
+```
+
+如果，调整了中间件 `logger` 和 `hello` 的执行顺序，
+
+```js
+connect()
+  .use(hello)
+  .use(logger)
+  .listen(3000);
+```
+由于 `hello` 中间件没有执行 `next` 回调，那么，后续的 `logger` 中间件将不会执行。
+
+### 写一个可配置的中间件
+
+为了做到可配置，中间件都会遵循一个简单的惯例：用一个函数返回另外一个函数。
+
+具体格式如下，
+```js
+function setup(options) {
+  // 配置业务
+  return function(req, res, next) {
+    // 中间件业务逻辑（这里还是可以访问闭包内的options）
+  };
+}
+```
