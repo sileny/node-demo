@@ -30,6 +30,7 @@ connect 中间件就是一个 javascript 函数，这个函数一般会有三个
 在中间件运行之前，`connect` 会用分派器接管请求对象，然后，交给第一个中间件处理。然后，根据需要，执行 `next` 回调。不执行 `next` 回调，能停止中间件的后续执行，可以利用该特征实现权限的校验。
 
 下面定义了俩中间件，第一个有执行 `next` 回调，第二个没有，因为，此时后续没有对应的中间件业务需要处理，所以，不需要将控制权交还给分派器。
+
 ```js
 const connect = require('connect');
 function logger(req, res, next) {
