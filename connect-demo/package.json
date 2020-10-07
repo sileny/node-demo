@@ -1,5 +1,5 @@
 {
-  "name": "connect",
+  "name": "connect-demo",
   "version": "1.0.0",
   "description": "connect以及中间件",
   "main": "01.js",
