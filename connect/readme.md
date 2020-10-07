@@ -15,6 +15,7 @@ npm i connect
 下面是一个 `connect` 的简单案例
 
 ```js
+// 01.js
 const app = require('connect')();
 app.use((req, res, next) => {
   res.end('hello');
@@ -33,6 +34,7 @@ connect 中间件就是一个 javascript 函数，这个函数一般会有三个
 下面定义了俩中间件，第一个有执行 `next` 回调，第二个没有，因为，此时后续没有对应的中间件业务需要处理，所以，不需要将控制权交还给分派器。
 
 ```js
+// 02.js
 const connect = require('connect');
 function logger(req, res, next) {
   console.log('s% s%', req.method, req.url);
@@ -51,6 +53,7 @@ connect()
 如果，调整了中间件 `logger` 和 `hello` 的执行顺序，
 
 ```js
+// 03.js
 connect()
   .use(hello)
   .use(logger)
