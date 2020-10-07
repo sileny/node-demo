@@ -5,6 +5,7 @@
 - [自动化](./automatic)
 - [Node自带的Buffer](./Buffer)
 - [cluster](./cluster)
+- [中间件-connect以及如何写一个中间件](./connect)
 - [Node使用inspect调试代码](./debug)
 - [dns](./dns)
 - [file-watcher文件监视器](./file-watcher)
