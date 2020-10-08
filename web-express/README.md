@@ -72,6 +72,37 @@ app.get('/', function (req, res) {
 app.listen(3000, 'localhost', () => console.log('server is running at 3000'))
 ```
 
+### render
+
+默认情况下，会使用 `ejs` 为默认的模板引擎
+```js
+const express = require('express');
+const app = express();
+app.get('/', function(req, res, next) {
+  res.render('index');
+});
+app.listen(3000);
+```
+
+如果，需要使用别的模板引擎，可以更改配置，如，将模板引擎改为 `pug`
+
+先安装 `pug` 依赖
+```
+npm install pug
+```
+
+然后，配置模板引擎
+
+```js
+app.set('view engine', 'pug');
+
+app.get('/', function(req, res, next) {
+  res.render('index');
+});
+```
+此时，将会将按照 `pug` 的规则渲染模板
+
+
 ### static
 
 - 使用真实的磁盘目录为静态资源目录
@@ -113,3 +144,7 @@ app.listen(3000, 'localhost', () => console.log('server is running at 3000'));
 ```html
 <img src="images/loading.gif" />
 ```
+
+### middleware
+
+原理参考[connect-demo#principle](https://github.com/sileny/node-demo/tree/main/connect-demo#principle)
