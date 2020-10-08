@@ -9,7 +9,7 @@
 - [body-parser](#body-parser)
 - [cookie-parser](#cookie-parser)
 - [express-session](#express-session)
-- [mongo](#mongo)
+- [使用mongo和express-session实现会话缓存](#mongo)
 
 ### query
 
@@ -188,3 +188,59 @@ app.use(express.json());
   - `path`: 设置cookie起作用的路径。`{path: '/news'}` 则只会在路径为`/news`时起作用。
   - `secure`：如果指定了 `secure` 为 `true`，只有在 `https` 里才可以看到，在 `http` 里是无效的。
   - `singed`：对cookie进行 `签名`，设置为 `true`，那么需要使用 `response.signedCookies` 来访问，`response.cookies` 是访问不到的。被篡改的 `cookie` 会被服务器拒绝，并且将 `cookie` 设置为初始值。
+
+
+### express-session
+
+客户端首次访问服务端会创建一个 `session` 对象，该对象会被拷贝到 `request` 属性上，通过 `request.session` 访问到。
+
+再次访问服务端时，会接收到客户端携带的 `key`，服务端可以根据 `key` 返回内容到客户端。可以用来做数据权限校验
+
+```js
+// app-10-express-session.js
+const express = require('express');
+const session = require('express-session');
+const app = express();
+
+// 1、使用中间件
+app.use(session({
+    secret: 'keyboard',// 随意写，作为服务端生成session的签名
+    resave: false,
+    saveUninitialized: false,// false表示未声明则客户端不会保存session；声明但未初始化
+    // name: "you can call it another name", // 保存在客户端的cookie的名字，默认是connect.sid。可以设置为自己定义的。
+    // cookie: {secure: true}// https才可以使用
+    cookie: {// 这里跟cookie一致
+        maxAge: 60000
+    },
+    rolling: true // 表示直到没有请求时才开始计算过期时间
+}));
+
+// 3、获取session
+app.get('/', (req, res) => {
+    if (req.session.username) {
+        res.send('欢迎回来：' + req.session.username);
+    } else {
+        res.send('未登录');
+    }
+});
+
+// 2、设置session
+app.get('/login', (req, res) => {
+    req.session.username = '张三';
+    res.send('登陆成功');
+    console.log(req.session)
+});
+
+app.listen(3000, 'localhost', () => console.log('server is running at 3000'));
+```
+
+上面对登录信息进行了 `session` 存储，必要时，需要销毁 `session`，比如，用户退出系统后，需要销毁数据
+
+使用 `req.sesson.destroy(callback?)` 进行 `session` 的销毁，案例在 `app-11-express-session.js`
+
+
+### mongo
+
+使用 `mongo` 和 `express-session` 实现 `session` 缓存
+
+案例在 `web-express/app-12-connect-mongo.js`
