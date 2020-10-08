@@ -5,6 +5,7 @@
 - [基本demo](#basic-demo)
 - [运行机制](#principle)
 - [写一个可配置的中间件](#write)
+- [默认的错误处理](#error-default)
 
 ### basic-demo
 安装依赖
@@ -73,4 +74,64 @@ function setup(options) {
     // 中间件业务逻辑（这里还是可以访问闭包内的options）
   };
 }
+```
+
+### error-default
+
+```javascript
+// 04.js
+const connect = require('connect');
+
+connect()
+  .use((req, res) => {
+    foo(); // 调用了一个没有声明的方法
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('hello');
+  })
+  .listen(3000);
+
+```
+
+报错信息为 `localhost/:1 GET http://localhost:3000/ 500 (Internal Server Error)`
+
+上面的中间件调用了一个未声明的方法，默认的处理是返回响应状态码 `500`，真正的应用程序里，一般还会做相应的处理
+
+### error-handler
+
+默认的处理是返回响应状态码 `500`，会将错误信息输出到外部，真正的应用程序里，一般不会将敏感信息暴漏给潜在的攻击者
+
+自定义错误处理
+```js
+const env = process.env.NODE_ENV || 'development';
+
+function errorHandler(err, req, res, next) {
+  res.statusCode = 500;
+  switch (env) {
+    case 'development':
+      console.log('error', err);
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify(err));
+      break;
+    default:
+      res.end('Server error');
+  }
+}
+
+module.exports = errorHandler;
+```
+
+使用中间件
+
+```js
+const connect = require('connect');
+const errorHandler = require('./error-handler');
+
+connect()
+  .use((req, res) => {
+    foo();
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('hello');
+  })
+  .use(errorHandler) // 使用自定义的错误处理中间件
+  .listen(3000);
 ```
