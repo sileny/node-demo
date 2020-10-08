@@ -26,7 +26,7 @@
 - [web](./web)
 - [web-mongodb](./web-db)
 - [express-middleware](./express-middleware)
-- [web-file-upload文件上传](./web-file-upload)
+- [web-file-upload文件上传](file-upload)
 - [web-static实现登录登出管理](./web-static)
 - [websocket](./websocket)
 - [zlib](./zlib)
