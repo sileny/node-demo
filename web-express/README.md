@@ -148,3 +148,43 @@ app.listen(3000, 'localhost', () => console.log('server is running at 3000'));
 ### middleware
 
 原理参考[connect-demo#principle](https://github.com/sileny/node-demo/tree/main/connect-demo#principle)
+
+### body-parser
+
+消息解析器，用来接收 MIME-encoded 主体部分
+
+由于 `express` 实现的方法太多，`body-parse` 被单独分理出一个模块
+
+常用的请求主体配置
+
+```
+// 1、处理 x-www-form-urlencoded 请求主体
+app.use(express.urlencoded({extended: false}));
+
+// 2、使用body-parser中间件处理json请求
+app.use(express.json());
+
+// 3、bodyParser.raw()--解析二进制格式
+// 4、bodyParser.text()--解析文本格式
+```
+
+### cookie-parser
+
+处理请求里的 `cookie` 信息
+
+案例：
+- `app-7-use-cookie-parser.js`
+- `app-8-use-cookie-parser.js`
+- `app-9-use-cookie-parser.js`
+
+`cookie-parser` 参数解析
+
+- 第一参数：key
+- 第二参数：value
+- 是个对象，包含以下属性
+  - `domain`: 可以实现域名共享cookie。`www.google.com` 是顶级域名，`news.google.com`、`email.google.com` 等是二级域名，如果要实现域名共享cookie，那么可以这样写: `{domain: '.google.com'}`
+  - `expires/maxAge`: 设置cookie超时时间。`{maxAge：60000}` 相当于 `{expires: new Date(Date.now() + 60000)}`
+  - `httpOnly`: 设置为 `true`，表示只可以在服务端操作，客户端js无法操作，可以防止 `xss` 攻击。
+  - `path`: 设置cookie起作用的路径。`{path: '/news'}` 则只会在路径为`/news`时起作用。
+  - `secure`：如果指定了 `secure` 为 `true`，只有在 `https` 里才可以看到，在 `http` 里是无效的。
+  - `singed`：对cookie进行 `签名`，设置为 `true`，那么需要使用 `response.signedCookies` 来访问，`response.cookies` 是访问不到的。被篡改的 `cookie` 会被服务器拒绝，并且将 `cookie` 设置为初始值。
