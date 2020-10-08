@@ -4,6 +4,7 @@
 - [params](#params)
 - [set](#set)
 - [render-template](#render-template)
+- [render数据到模板](#render-data-to-template)
 - [static静态资源目录](#static)
 - [middleware](#middleware)
 - [body-parser](#body-parser)
@@ -103,6 +104,30 @@ app.get('/', function(req, res, next) {
 此时，将会将按照 `pug` 的规则渲染模板
 
 
+### render-data-to-template
+
+渲染数据到模板里
+
+- `render('index', { data: [] })` 通过 `render` 的参数传递数据到 `template` 里
+- `res.locals` 传递请求层面的数据
+- `app.locals` 传递程序应用层面的数据
+
+默认情况下，`express` 在初始化的时候，会初始化一个 `app.settings = {}`，程序级的变量。如果设置 `app.set('title', 'Application title')`，那么在模板里可以访问到
+
+```ejs
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= settings.title %></title>
+</head>
+<body>
+<h1>Welcom <%= settings.title %></h1>
+</body>
+</html>
+```
+
 ### static
 
 - 使用真实的磁盘目录为静态资源目录
@@ -187,7 +212,7 @@ app.use(express.json());
   - `httpOnly`: 设置为 `true`，表示只可以在服务端操作，客户端js无法操作，可以防止 `xss` 攻击。
   - `path`: 设置cookie起作用的路径。`{path: '/news'}` 则只会在路径为`/news`时起作用。
   - `secure`：如果指定了 `secure` 为 `true`，只有在 `https` 里才可以看到，在 `http` 里是无效的。
-  - `singed`：对cookie进行 `签名`，设置为 `true`，那么需要使用 `response.signedCookies` 来访问，`response.cookies` 是访问不到的。被篡改的 `cookie` 会被服务器拒绝，并且将 `cookie` 设置为初始值。
+  - `singed`：对cookie进行 `签名`，设置为 `true`，那么需要使用 `response.signedCookies` 来访问，`response.cookies` 是访问不到的。被篡改的 `cookie` 会被服务器拒绝，并且将 `cookie` 设置为初始值。可以有效 `防止中间人攻击`
 
 
 ### express-session
