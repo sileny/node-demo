@@ -3,7 +3,7 @@
 - [query](#query)
 - [params](#params)
 - [set](#set)
-- [render](#render)
+- [render-template](#render-template)
 - [static静态资源目录](#static)
 - [middleware](#middleware)
 - [body-parser](#body-parser)
@@ -72,7 +72,7 @@ app.get('/', function (req, res) {
 app.listen(3000, 'localhost', () => console.log('server is running at 3000'))
 ```
 
-### render
+### render-template
 
 默认情况下，会使用 `ejs` 为默认的模板引擎
 ```js
