@@ -6,6 +6,7 @@
 - [运行机制](#principle)
 - [写一个可配置的中间件](#write)
 - [默认的错误处理](#error-default)
+- [自定义处理错误](#error-handler)
 
 ### basic-demo
 安装依赖
