@@ -193,6 +193,41 @@ app.use(express.json());
 // 4、bodyParser.text()--解析文本格式
 ```
 
+- `limit` 限制请求体大小
+
+`body-parser` 的 `limit` 参数是用来限制过大的请求的，其默认值是 `100k`，如果需要接收更大的表单，需要修改这个参数值。
+
+为什么需要限制，过大的请求会造成服务器压力，甚至废掉服务器。
+
+下面的 `server.js` 模拟服务端程序
+```js
+const connect = require('connect');
+const bodyParser = require('body-parser');
+
+connect()
+  .use(bodyParser.json({ extended: false, limit: 999999 }))
+  .use((req, res, next) => { console.log('ok'); })
+  .listen(3000);
+```
+
+下面写一个攻击性的程序
+```js
+const http = require('http');
+const req = http.request({
+  method: 'post',
+  port: 3000,
+  headers: { 'Content-Type': 'application/json' }
+});
+req.write('[');
+let n = 3000;
+while(n--) {
+  req.write('"foo",');
+}
+req.write('"bar"');
+req.end();
+```
+
+
 ### cookie-parser
 
 处理请求里的 `cookie` 信息
