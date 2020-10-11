@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title%></title>
+</head>
+<body>
+<div>填写表单后提交</div>
+<form action="/post" method="post">
+    <input type="text" name="entry[title]" placeholder="title">
+    <textarea type="text" name="entry[body]" placeholder="title"></textarea>
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>
