@@ -7,6 +7,7 @@
 - [cluster](./cluster)
 - [compression-demo压缩请求](./compression-demo)
 - [中间件-connect以及如何写一个中间件](./connect-demo)
+- [csrf跨站请求伪造](./csrf)
 - [Node使用inspect调试代码](./debug)
 - [dns](./dns)
 - [express留言板](./express-comment)
