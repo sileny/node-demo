@@ -15,7 +15,7 @@
 - [express-mongodb案例](./express-mongodb)
 - [file-upload文件上传](./file-upload)
 - [file-watcher文件监视器](./file-watcher)
-- [fileSysytem](./fileSystem)
+- [fileSystem](./fileSystem)
 - [http](./http)
 - [mysql](./mysql)
 - [net](./net)
