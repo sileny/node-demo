@@ -6,7 +6,7 @@ const path = require('path');
 const readline = require('readline');
 const glob = require('glob');
 
-// 假定不合法的字符是`//imgcdn.cn/`
+// 假定不合法的关键字符是`//imgcdn.cn/`
 const target = '//imgcdn.cn/';
 const results = [];
 const set = new Set();
@@ -65,7 +65,7 @@ glob('src/**/*.less', action);
 
 ```
 
-下面是`errors.js`内容
+假定`error.js`是不合法的字符列表，下面是`errors.js`内容
 ```js
 module.exports = `
 https://imgcdn.cn/4F7F6F6D-28DA-4F-120x72.gif
