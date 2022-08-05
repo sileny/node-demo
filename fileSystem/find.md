@@ -6,16 +6,20 @@ const path = require('path');
 const readline = require('readline');
 const glob = require('glob');
 
-// 假定不合法的关键字符是`//imgcdn.cn/`
+// 假定【不合法的关键字符】是`//imgcdn.cn/`
 const target = '//imgcdn.cn/';
+// 查找的结果
 const results = [];
+// 缓存已经找到的内容，保证results数组元素的唯一性
 const set = new Set();
 const errors = require('./errors');
 
+// 找到关键的不合法的数据
 function hasTarget(source) {
   return source.includes(target);
 }
 
+// 在 【不合法的字符列表】 （即，error.js里的内容）里找到【不合法的关键字符】
 function hasError(source) {
   for (let i = 0; i < errors.length; i++) {
     if (source.includes(errors[i])) return true;
@@ -24,19 +28,25 @@ function hasError(source) {
 }
 
 function read(files) {
+  // 读取文件
   for (let i = 0; i < files.length; i++) {
     const file = files[i];
+    // 排除node_modules目录
     if (file.includes('/node_modules/')) continue;
     const filename = path.resolve(__dirname, file);
     const data = fs.readFileSync(filename, 'utf8');
+    // 如果文件里没有找到【不合法的关键字符】
     if (!hasTarget(data)) continue;
+    // 逐行读取
     const reader = readline.createInterface({
       input: fs.createReadStream(filename),
     });
     reader.on('line', (source) => {
       if (hasTarget(source)) {
         if (hasError(source)) {
+          // 如果已经存储过
           if (set.has(source)) return;
+          // 存储唯一值
           set.add(source);
           results.push({
             file,
@@ -46,7 +56,9 @@ function read(files) {
       }
     });
     reader.on('close', () => {
+      // 打印非法字符
       console.table(results);
+      // 退出
       process.exit(0);
     });
   }
