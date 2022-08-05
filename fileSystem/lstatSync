@@ -1,0 +1,27 @@
+# lstatSync
+
+下面是判断是否为文件夹的案例
+```js
+const fs = require('fs');
+const path = require('path');
+
+const root = path.resolve('f:/');
+
+function isDir(dir) {
+  return fs.lstatSync(path.resolve(root, dir)).isDirectory();
+}
+
+const dirs = fs
+  .readdirSync(root)
+  .map((value) => {
+    try {
+      if (isDir(value)) {
+        return value;
+      }
+    } catch (e) {}
+    return false;
+  })
+  .filter(Boolean);
+  
+console.log(dirs);
+```
