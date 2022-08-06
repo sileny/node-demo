@@ -154,3 +154,21 @@ console.table(results);
 
 ```
 
+上面`target`只是一个字符串，没有做大小写匹配，如果是多个，就不满足场景，可以使用正则来匹配多个字符
+```js
+const target = '//imgcdn.sto.cn/,abc';
+
+const flags = 'i';
+
+function hasTarget(source) {
+  return new RegExp(target.split(',').join('|'), flags).test(source);
+}
+
+function hasError(source) {
+  for (let i = 0; i < errors.length; i++) {
+    if (new RegExp(errors[i], flags).test(source)) return true;
+  }
+  return false;
+}
+```
+其余代码保持不变
