@@ -1,5 +1,6 @@
 # 查找文件里是否存在某些不合法的字符
 
+以下是核心代码，`read.js`
 ```js
 const fs = require('fs');
 const path = require('path');
@@ -89,5 +90,67 @@ https://imgcdn.cn/6D30A73E-62C3-45-2156x1202.png
   .split('\n')
   .filter(Boolean)
   .map((value) => value.replace(/^https:/g, '').trim());
+```
+
+对`read.js`进行优化，下面是优化好的
+```js
+const fs = require('fs');
+const path = require('path');
+const { EOL } = require('os');
+const glob = require('glob');
+
+const target = '//imgcdn.sto.cn/';
+const results = [];
+
+const errors = require('./errors');
+
+function hasTarget(source) {
+  return source.includes(target);
+}
+
+function hasError(source) {
+  for (let i = 0; i < errors.length; i++) {
+    if (source.includes(errors[i])) return true;
+  }
+  return false;
+}
+
+function read(files) {
+  for (let i = 0; i < files.length; i++) {
+    const file = files[i];
+    if (file.includes('/node_modules/')) continue;
+    const filename = path.resolve(__dirname, file);
+    const data = fs.readFileSync(filename, 'utf8');
+    if (!hasTarget(data)) continue;
+    // 获取所有的行【如果不需要行号，可以直接使用filter过滤】
+    const list = data.split(new RegExp(EOL));
+    for (let j = 0; j < list.length; j++) {
+      const source = list[j];
+      if (!hasError(source)) continue;
+      results.push({
+        file,
+        lineno: j + 1,
+        source,
+      });
+    }
+  }
+}
+
+// 匹配路径模型
+const patterns = [
+  'src/**/*.js',
+  'src/**/*.jsx',
+  'src/**/*.css',
+  'src/**/*.scss',
+  'src/**/*.less',
+  'public/**/*.html',
+];
+
+patterns.forEach((pattern) => {
+  read(glob.sync(pattern));
+});
+
+console.table(results);
+
 ```
 
